@@ -1,32 +1,9 @@
-## Instructions
+# Test
 
-Clone the repository, after execute Yarn:
+Github:
+ - PROD: https://github.com/ui2code/currency-converter
+ - DEV: https://github.com/ui2code/currency-converter/tree/develop
 
-```
-yarn
-yarn dev
-```
-
-## Explanation
-
-This api fetches current conversions through a third-party endpoint, and returns BRL, USD, EUR and INR currencies
-
-## Swagger
-
-- `/docs` - Contains a Swagger Page.
-
-## Conversions
-
-- `/v1/convert/{currency}/{value}`:
-
-In `value` insert the number to convert, in `currency` insert the currency.
-
-Example: `/v1/convert/100/USD`
-
-## Tests
-
-To start jest unit tests run:
-
-```
-yarn test
-```
+Vercel: 
+ - PROD: https://currency-converter-av3k0z7bl-hemersonlourencogmailcoms-projects.vercel.app/api/v1/currency
+ - DEV: https://currency-converter-auspxk1pk-hemersonlourencogmailcoms-projects.vercel.app/?vercelToolbarCode=CkbALpfd0K3y8qf
