@@ -1,27 +1,18 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { CurrencyRoutes } from '@/api/routes/CurrencyRoutes';
 
 const app: Application = express();
-
-const currencyRoutes = new CurrencyRoutes().getRoutes();
-
-app.use(cors());
-dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1', currencyRoutes);
 app.use('/api/v1', (_, res) => {
-  res.json({ message: 'API / V1' })
+  res.json({ message: `API / V1` })
 });
 app.use('/api', (_, res) => {
-  res.json({ message: 'API' })
+  res.json({ message: `API` })
 });
 app.use('/', (_, res) => {
-  res.json({ message: 'Página Inicial' })
+  res.json({ message: `Página Inicial` })
 });
 
 app.use(
